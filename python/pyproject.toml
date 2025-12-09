@@ -1,0 +1,48 @@
+[project]
+name = "apiverve-useragentparser"
+version = "1.1.12"
+authors = [
+  { name="APIVerve", email="hello@apiverve.com" },
+]
+description = "User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string."
+keywords = ["user agent parser", "user agent parser api", "user agent parser tool", "user agent parser software", "user agent parser service"]
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Education",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Internet :: WWW/HTTP :: Site Management",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Internet",
+    "Topic :: Communications",
+    "Topic :: Office/Business",
+    "Topic :: Text Processing",
+    "Topic :: Security",
+    "Topic :: Database",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Pre-processors",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Natural Language :: English",
+]
+
+[project.urls]
+Homepage = "https://apiverve.com?utm_source=pypi"
+Repository = "https://github.com/apiverve/useragentparser-api"
+Documentation = "https://docs.apiverve.com/api/useragentparser?utm_source=pypi"
+Twitter = "https://twitter.com/apivervehq"
