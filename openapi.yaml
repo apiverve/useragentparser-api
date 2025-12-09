@@ -1,0 +1,85 @@
+openapi: 3.0.4
+info:
+  title: User Agent Parser
+  description: User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/useragentparser:
+    post:
+      summary: Parse User Agent
+      description: User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.
+      operationId: useragentparser
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  ua: Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0
+                  browser:
+                    name: Chrome
+                    version: 60.0.0.0
+                    major: '60'
+                  engine:
+                    name: Blink
+                    version: 60.0.0.0
+                  os:
+                    name: Windows
+                    version: '10'
+                  device: {}
+                  cpu: {}
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ua:
+                  type: string
+                  description: The user agent string to parse
+                  example: Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0
+              required:
+              - ua
+              example:
+                ua: Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
