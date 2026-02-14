@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: User Agent Parser
-  description: User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.
+  description: >-
+    User Agent Parser is a simple tool for parsing user agent strings. It
+    returns the browser, operating system, and more from the user agent string.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/useragentparser:
     post:
       summary: Parse User Agent
-      description: User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.
+      description: Parse the user agent string to get browser, OS, and more
       operationId: useragentparser
       parameters: []
       responses:
@@ -35,13 +37,15 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  ua: Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0
+                  ua: >-
+                    Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML,
+                    like Gecko) Chrome/60.0.0.0 Safari/537.36.0
                   browser:
                     name: Chrome
                     version: 60.0.0.0
@@ -59,7 +63,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -70,11 +74,8 @@ paths:
                 ua:
                   type: string
                   description: The user agent string to parse
-                  example: Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0
               required:
-              - ua
-              example:
-                ua: Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0
+                - ua
 components:
   securitySchemes:
     api_key:
@@ -82,4 +83,8 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  ua: >-
+    Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko)
+    Chrome/60.0.0.0 Safari/537.36.0
