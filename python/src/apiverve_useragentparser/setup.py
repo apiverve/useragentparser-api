@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_useragentparser',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     description='User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/useragentparser',
-        'Source': 'https://github.com/apiverve/useragentparser-api',
-        'Bug Tracker': 'https://github.com/apiverve/useragentparser-api/issues'
-    },
+    url='https://useragentparser.apiverve.com?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
