@@ -57,7 +57,6 @@ namespace APIVerve.API.UserAgentParser
         public string Version { get; set; }
 
         [JsonProperty("major")]
-        [JsonConverter(typeof(ParseStringConverter))]
         public long Major { get; set; }
     }
 
