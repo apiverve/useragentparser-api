@@ -231,8 +231,9 @@ from apiverve_useragentparser.apiClient import UseragentparserAPIClient
 
 api = UseragentparserAPIClient("[YOUR_API_KEY]")
 
+query = { "ua": "Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0" }
+
 try:
-    query = { "ua": "Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0" }
     result = api.execute(query)
     print(result)
 finally:
