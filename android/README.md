@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:useragentparser-api:1.1.13'
+    implementation 'com.github.apiverve:useragentparser-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ UserAgentParserAPIClient client = new UserAgentParserAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("ua", "");
+    parameters.put("ua", "Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
