@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/useragentparser",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.",
   "main": "index.js",
   "types": "index.d.ts",
