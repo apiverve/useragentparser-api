@@ -20,18 +20,17 @@ class APIError extends Error {
 /**
  * Make an API call with comprehensive error handling
  */
-async function callUserAgentParserAPIWithErrorHandling(queryParams = {}) {
+async function callUserAgentParserAPIWithErrorHandling(requestData) {
   try {
     console.log('📤 Making API request...');
 
-    const params = new URLSearchParams(queryParams);
-    const url = `${API_URL}?${params}`;
-
-    const response = await fetch(url, {
-      method: 'GET',
+    const response = await fetch(API_URL, {
+      method: 'POST',
       headers: {
-        'x-api-key': API_KEY
-      }
+        'x-api-key': API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestData)
     });
 
     // Parse response
@@ -106,7 +105,7 @@ async function callWithRetry(maxRetries = 3, initialDelay = 1000) {
       console.log(`\n🔄 Attempt ${attempt}/${maxRetries}`);
 
       const result = await callUserAgentParserAPIWithErrorHandling({
-        // Your query parameters here
+        // Your request data here
       });
 
       return result;
