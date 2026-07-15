@@ -14,14 +14,20 @@ API_URL = 'https://api.apiverve.com/v1/useragentparser'
 
 def call_useragentparser_api():
     """
-    Make a GET request to the User Agent Parser API
+    Make a POST request to the User Agent Parser API
     """
     try:
+        # Request body
+        request_body &#x3D; {
+    &#x27;ua&#x27;: &#x27;Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0&#x27;
+}
+
         headers = {
-            'x-api-key': API_KEY
+            'x-api-key': API_KEY,
+            'Content-Type': 'application/json'
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.post(API_URL, headers=headers, json=request_body)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
