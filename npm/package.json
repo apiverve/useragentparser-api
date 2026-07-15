@@ -1,12 +1,12 @@
 {
   "name": "@apiverve/useragentparser",
-  "version": "1.1.14",
+  "version": "1.2.0",
   "description": "User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
   "files": [
     "index.js",
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    ""
+    "user agent parser", "user agent parser api", "user agent parser tool", "user agent parser software", "user agent parser service"
   ],
   "author": {
     "name": "APIVerve",
@@ -41,8 +41,7 @@
     "dotenv": "^16.4.7"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2",
-    "promise": "^8.3.0",
-    "axios": "1.13.2"
+    "axios": "1.13.2",
+    "form-data": "^4.0.1"
   }
 }
