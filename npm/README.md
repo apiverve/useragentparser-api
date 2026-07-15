@@ -137,7 +137,10 @@ async function makeRequest() {
       "version": "10"
     },
     "device": {},
-    "cpu": {}
+    "cpu": {},
+    "isMobile": false,
+    "isBot": false,
+    "summary": "Chrome 60 on Windows 10"
   }
 }
 ```
