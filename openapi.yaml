@@ -58,6 +58,9 @@ paths:
                     version: '10'
                   device: {}
                   cpu: {}
+                  isMobile: false
+                  isBot: false
+                  summary: Chrome 60 on Windows 10
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
