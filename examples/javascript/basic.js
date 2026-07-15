@@ -9,15 +9,22 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/useragentparser';
 
 /**
- * Make a GET request to the User Agent Parser API
+ * Make a POST request to the User Agent Parser API
  */
 async function callUserAgentParserAPI() {
   try {
+    // Request body
+    const requestBody &#x3D; {
+    &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0&quot;
+};
+
     const response = await fetch(API_URL, {
-      method: 'GET',
+      method: 'POST',
       headers: {
-        'x-api-key': API_KEY
-      }
+        'x-api-key': API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
     });
 
     // Check if response is successful
