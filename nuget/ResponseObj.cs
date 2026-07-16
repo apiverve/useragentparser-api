@@ -25,6 +25,9 @@ namespace APIVerve.API.UserAgentParser
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -46,6 +49,15 @@ namespace APIVerve.API.UserAgentParser
 
         [JsonProperty("cpu")]
         public Cpu Cpu { get; set; }
+
+        [JsonProperty("isMobile")]
+        public bool? IsMobile { get; set; }
+
+        [JsonProperty("isBot")]
+        public bool? IsBot { get; set; }
+
+        [JsonProperty("summary")]
+        public string Summary { get; set; }
     }
 
     public partial class Browser
@@ -57,7 +69,7 @@ namespace APIVerve.API.UserAgentParser
         public string Version { get; set; }
 
         [JsonProperty("major")]
-        public long Major { get; set; }
+        public long? Major { get; set; }
     }
 
     public partial class Cpu
@@ -71,5 +83,17 @@ namespace APIVerve.API.UserAgentParser
 
         [JsonProperty("version")]
         public string Version { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
