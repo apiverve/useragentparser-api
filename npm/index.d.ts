@@ -25,15 +25,16 @@ declare module '@apiverve/useragentparser' {
 
 
   interface UserAgentParserData {
-      ua:       null | string;
-      browser:  Browser;
-      engine:   Engine;
-      os:       Engine;
-      device:   CPU;
-      cpu:      CPU;
-      isMobile: boolean | null;
-      isBot:    boolean | null;
-      summary:  null | string;
+      ua:         null | string;
+      browser:    Browser;
+      engine:     Engine;
+      os:         Engine;
+      device:     CPU;
+      cpu:        CPU;
+      isMobile:   boolean | null;
+      isBot:      boolean | null;
+      deviceType: null | string;
+      summary:    null | string;
   }
   
   interface Browser {

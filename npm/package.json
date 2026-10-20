@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/useragentparser",
-  "version": "1.2.0",
-  "description": "User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.",
+  "version": "1.2.2",
+  "description": "User Agent Parser parses user agent strings to extract browser, operating system, and hardware details. It identifies device types, CPU architecture, and bot traffic, so you can run user agent detection on every incoming HTTP request.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "user agent parser", "user agent parser api", "user agent parser tool", "user agent parser software", "user agent parser service"
+    "user agent parser api", "user agent api", "user agent parser", "useragent parser", "parse user agent"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/useragentparser-api/issues"
   },
-  "homepage": "https://useragentparser.apiverve.com?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/useragentparser?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
