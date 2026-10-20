@@ -56,6 +56,9 @@ namespace APIVerve.API.UserAgentParser
         [JsonProperty("isBot")]
         public bool? IsBot { get; set; }
 
+        [JsonProperty("deviceType")]
+        public string DeviceType { get; set; }
+
         [JsonProperty("summary")]
         public string Summary { get; set; }
     }
