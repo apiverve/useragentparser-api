@@ -2,8 +2,10 @@ openapi: 3.0.4
 info:
   title: User Agent Parser
   description: >-
-    User Agent Parser is a simple tool for parsing user agent strings. It
-    returns the browser, operating system, and more from the user agent string.
+    User Agent Parser parses user agent strings to extract browser, operating
+    system, and hardware details. It identifies device types, CPU architecture,
+    and bot traffic, so you can run user agent detection on every incoming HTTP
+    request.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +20,7 @@ servers:
 paths:
   /v1/useragentparser:
     post:
-      summary: Parse User Agent
+      summary: User Agent Parser
       description: Parse the user agent string to get browser, OS, and more
       operationId: useragentparser
       parameters: []
@@ -60,6 +62,7 @@ paths:
                   cpu: {}
                   isMobile: false
                   isBot: false
+                  deviceType: desktop
                   summary: Chrome 60 on Windows 10
         '401':
           description: Your request was not authorized, or your API Key was invalid

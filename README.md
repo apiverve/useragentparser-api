@@ -1,13 +1,13 @@
-# [User Agent Parser API](https://useragentparser.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [User Agent Parser API](https://apiverve.com/marketplace/useragentparser?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-User Agent Parser is a simple tool for parsing user agent strings. It returns the browser, operating system, and more from the user agent string.
+User Agent Parser parses user agent strings to extract browser, operating system, and hardware details. It identifies device types, CPU architecture, and bot traffic, so you can run user agent detection on every incoming HTTP request.
 
 The User Agent Parser API provides a simple, reliable way to integrate user agent parser functionality into your applications. Built for developers who need production-ready user agent parser capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://useragentparser.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/useragentparser?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://useragentparser.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/useragentparser?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -167,7 +167,7 @@ go get github.com/apiverve/useragentparser-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [User Agent Parser API](https://useragentparser.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [User Agent Parser API](https://apiverve.com/marketplace/useragentparser?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/useragentparser](https://docs.apiverve.com/ref/useragentparser)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -197,11 +197,47 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the User Agent Parser API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "ua": "Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36.0 (KHTML, like Gecko) Chrome/60.0.0.0 Safari/537.36.0",
+    "browser": {
+      "name": "Chrome",
+      "version": "60.0.0.0",
+      "major": "60"
+    },
+    "engine": {
+      "name": "Blink",
+      "version": "60.0.0.0"
+    },
+    "os": {
+      "name": "Windows",
+      "version": "10"
+    },
+    "device": {},
+    "cpu": {},
+    "isMobile": false,
+    "isBot": false,
+    "deviceType": "desktop",
+    "summary": "Chrome 60 on Windows 10"
+  }
 }
 ```
 
@@ -209,7 +245,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [User Agent Parser API](https://useragentparser.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [User Agent Parser API](https://apiverve.com/marketplace/useragentparser?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
