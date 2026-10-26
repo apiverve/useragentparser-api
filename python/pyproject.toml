@@ -1,6 +1,6 @@
 [project]
 name = "apiverve-useragentparser"
-version = "1.2.2"
+version = "1.2.3"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
