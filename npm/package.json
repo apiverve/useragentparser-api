@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/useragentparser",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "User Agent Parser parses user agent strings to extract browser, operating system, and hardware details. It identifies device types, CPU architecture, and bot traffic, so you can run user agent detection on every incoming HTTP request.",
   "main": "index.js",
   "types": "index.d.ts",
