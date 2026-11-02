@@ -25,16 +25,22 @@ declare module '@apiverve/useragentparser' {
 
 
   interface UserAgentParserData {
-      ua:         null | string;
-      browser:    Browser;
-      engine:     Engine;
-      os:         Engine;
-      device:     CPU;
-      cpu:        CPU;
-      isMobile:   boolean | null;
-      isBot:      boolean | null;
-      deviceType: null | string;
-      summary:    null | string;
+      ua:                null | string;
+      browser:           Browser;
+      engine:            Engine;
+      os:                Engine;
+      device:            CPU;
+      cpu:               CPU;
+      isMobile:          boolean | null;
+      isBot:             boolean | null;
+      deviceType:        null | string;
+      clientType:        null | string;
+      library:           null;
+      isSuspicious:      boolean | null;
+      suspiciousReasons: any[];
+      osVersionFrozen:   boolean | null;
+      versionCheck:      VersionCheck;
+      summary:           null | string;
   }
   
   interface Browser {
@@ -49,6 +55,14 @@ declare module '@apiverve/useragentparser' {
   interface Engine {
       name:    null | string;
       version: null | string;
+  }
+  
+  interface VersionCheck {
+      browserFamily: null | string;
+      latestVersion: null | string;
+      majorsBehind:  number | null;
+      isOutdated:    boolean | null;
+      osEndOfLife:   null;
   }
 
   export default class useragentparserWrapper {

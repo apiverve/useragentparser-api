@@ -138,6 +138,18 @@ async function makeRequest() {
     "isMobile": false,
     "isBot": false,
     "deviceType": "desktop",
+    "clientType": "browser",
+    "library": null,
+    "isSuspicious": false,
+    "suspiciousReasons": [],
+    "osVersionFrozen": true,
+    "versionCheck": {
+      "browserFamily": "Chrome",
+      "latestVersion": "156",
+      "majorsBehind": 95,
+      "isOutdated": true,
+      "osEndOfLife": null
+    },
     "summary": "Chrome 60 on Windows 10"
   }
 }
