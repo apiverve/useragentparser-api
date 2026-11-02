@@ -59,6 +59,24 @@ namespace APIVerve.API.UserAgentParser
         [JsonProperty("deviceType")]
         public string DeviceType { get; set; }
 
+        [JsonProperty("clientType")]
+        public string ClientType { get; set; }
+
+        [JsonProperty("library")]
+        public object Library { get; set; }
+
+        [JsonProperty("isSuspicious")]
+        public bool? IsSuspicious { get; set; }
+
+        [JsonProperty("suspiciousReasons")]
+        public object[] SuspiciousReasons { get; set; }
+
+        [JsonProperty("osVersionFrozen")]
+        public bool? OsVersionFrozen { get; set; }
+
+        [JsonProperty("versionCheck")]
+        public VersionCheck VersionCheck { get; set; }
+
         [JsonProperty("summary")]
         public string Summary { get; set; }
     }
@@ -86,6 +104,24 @@ namespace APIVerve.API.UserAgentParser
 
         [JsonProperty("version")]
         public string Version { get; set; }
+    }
+
+    public partial class VersionCheck
+    {
+        [JsonProperty("browserFamily")]
+        public string BrowserFamily { get; set; }
+
+        [JsonProperty("latestVersion")]
+        public long? LatestVersion { get; set; }
+
+        [JsonProperty("majorsBehind")]
+        public long? MajorsBehind { get; set; }
+
+        [JsonProperty("isOutdated")]
+        public bool? IsOutdated { get; set; }
+
+        [JsonProperty("osEndOfLife")]
+        public object OsEndOfLife { get; set; }
     }
 
     public partial class Premium
